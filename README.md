@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initialized application using Devise & acts_as_tenant.
 
-Things you may want to cover:
+Using those two I created a custom filter at the Application Controller level, that finds the current users associated account_id and scopes all content based on that.
+If no current user is found or if this user doesn't have an account associated, an error is returned.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Simple solution to preventing data overflow while having several logins on a platform.
